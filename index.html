@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Replica</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #0d0b02
+        }
+        h1 {
+          color: #e2c376
+        }
+        h2 {
+          color: #e2c376
+        }
+         p {
+           color: #e7e7e7
+         }
+        
+        /* Navigation */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        /* Hero Section */
+        .section-hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-top: 80px;
+        }
+        
+        .hero-background {
+            
+            text-align: right;
+            z-index: -1;
+        }
+        
+        .hero-text-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-heading {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-description {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+        
+        .hero-contact-info-wrapper {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .hero-contact-link {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Work Section */
+        .section {
+            padding: 100px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .grid-ratio-1x2 {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+        
+        .title-wrapper-sticky {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+        
+        .heading-h2 {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .project-image-wrapper {
+            margin-bottom: 20px;
+        }
+        
+        .project-image-wrapper img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+        
+        .project-heading {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Services Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .skill-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Contact Section */
+        .contact-heading {
+            font-size: 5rem;
+            margin-bottom: 40px;
+        }
+        
+        .contact-link {
+            font-size: 2rem;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        .section-footer {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-ratio-1x2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-heading {
+                font-size: 3rem;
+            }
+            
+            .hero-description {
+                font-size: 1.2rem;
+            }
+            
+            .contact-heading {
+                font-size: 3rem;
+            }
+            
+            .contact-link {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-bar">
+        <a href="/" class="nav-logo">
+            <img src="portfolio logo.png" alt="Logo">
+        </a>
+        <div class="nav-links">
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">Let's Talk</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="section section-hero">
+        <img src="skull face.png" alt="Background" class="hero-background" width="600">
+        <div class="hero-text-wrapper">
+            <div class="hero-heading">Cole Jasmin</div>
+            <div class="hero-description">
+                Global Business and Digital Arts student with expertise in digital marketing, SEO, and graphic design. 
+                Skilled in tools such as Google Ads and Adobe Creative Suite, I create impactful, brand-aligned visuals and campaigns.
+            </div>
+            <div class="hero-contact-info-wrapper">
+                <a href="mailto:colejasmin1@gmail.com" class="hero-contact-link">colejasmin1@gmail.com</a>
+                <a href="tel:6479804890" class="hero-contact-link">(647) - 980 - 4890</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-ratio-1x2">
+                <div class="title-wrapper-sticky">
+                    <div class="label-heading">Work</div>
+                    <div class="heading-h2">Featured Projects</div>
+                    <p>My design approach prioritizes the needs and preferences of users. I focus on creating products that enhance the user experience.</p>
+                </div>
+                <div class="project-grid">
+                    <a href="#" class="project-link">
+                        <div class="project-image-wrapper">
+                            <img src="placeholder-project1.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-text-wrapper">
+                            <h3 class="project-heading">Photography</h3>
+                            <p>Proficient in photography, I capture high-quality images that enhance digital content and align with brand aesthetics.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-link">
+                        <div class="project-image-wrapper">
+                            <img src="placeholder-project2.jpg" alt="Project 2">
+                        </div>
+                        <div class="project-text-wrapper">
+                            <h3 class="project-heading">Rebranding</h3>
+                            <p>Experienced in rebranding, I develop cohesive brand identities that elevate visual appeal and strengthen market positioning.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-link">
+                        <div class="project-image-wrapper">
+                            <img src="placeholder-project3.jpg" alt="Project 3">
+                        </div>
+                        <div class="project-text-wrapper">
+                            <h3 class="project-heading">SEO & Google Ads</h3>
+                            <p>Skilled in SEO and Google Ads campaigns, I drive targeted traffic and optimize online visibility.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-link">
+                        <div class="project-image-wrapper">
+                            <img src="placeholder-project4.jpg" alt="Project 4">
+                        </div>
+                        <div class="project-text-wrapper">
+                            <h3 class="project-heading">Logo Design</h3>
+                            <p>Proficient in logo design, I create distinctive, memorable logos that reflect brand identity.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-ratio-1x2">
+                <div class="title-wrapper-sticky">
+                    <div class="label-heading">Services</div>
+                    <div class="heading-h2">Services Offered</div>
+                    <a href="#about" class="primary-button">About Me</a>
+                </div>
+                <div class="skills-grid">
+                    <div class="card services">
+                        <div class="skill-title">User-Centered Design</div>
+                        <p>My design approach prioritizes the needs and preferences of users. I focus on creating products that enhance the user experience.</p>
+                    </div>
+                    <div class="card services">
+                        <div class="skill-title">Prototyping and Wireframing</div>
+                        <p>I am adept at quickly turning ideas into tangible prototypes and wireframes. These tools help me visualize concepts and test designs.</p>
+                    </div>
+                    <div class="card services">
+                        <div class="skill-title">Visual Design Expertise</div>
+                        <p>I have a keen eye for aesthetics and a strong grasp of visual design principles. I am skilled in typography, color theory, and layout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-text-wrapper">
+                <div class="contact-heading">Let's Talk</div>
+            </div>
+            <div class="contact-subheading-wrapper">
+                <a href="mailto:colejasmin1@gmail.com" class="contact-link">colejasmin1@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="section section-footer">
+        <div class="container container-footer">
+            <div class="footer-bottom-links"></div>
+        </div>
+    </div>
+</body>
+</html>
